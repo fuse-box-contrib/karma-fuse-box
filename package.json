@@ -1,0 +1,43 @@
+{
+  "name": "karma-fuse-box",
+  "version": "0.1.0",
+  "description": "Use fuse-box with karma",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test:jasmine": "./node_modules/karma/bin/karma start karma.config.js"
+  },
+  "author": {
+    "name": "Tobias Timm",
+    "email": "tbs.timm@gmail.com",
+    "url": "https://twitter.com/TbsTimm"
+  },
+  "license": "MIT",
+  "keywords": [
+    "es2015",
+    "karma",
+    "modules",
+    "import",
+    "export",
+    "plugin",
+    "preprocessor",
+    "fuse-box"
+  ],
+  "peerDependencies": {
+    "fuse-box": ">= 3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "jasmine-core": "^2.99.1",
+    "karma": "^2.0.0",
+    "karma-jasmine": "^1.1.1",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-phantomjs-launcher": "^1.0.4"
+  },
+  "dependencies": {
+    "chokidar": "^2.0.2",
+    "fuse-box": "^3.1.3",
+    "lodash": "^4.17.5"
+  }
+}
