@@ -1,7 +1,7 @@
-import one from './fixtures/1';
+import one from './fixtures/one';
 
-describe('t1', () => {
-  describe('Fixture 1', () => {
+describe('t2', () => {
+  describe('Fixture 2', () => {
     it('should be defined', () => {
       expect(one).toBeDefined();
     });

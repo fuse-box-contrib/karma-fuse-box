@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "ES5",
+    "sourceMap": true,
+    "inlineSources": true,
+    "jsx": "react",
+    "importHelpers": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["jasmine", "node"],
+    "baseUrl": ".."
+  },
+  "include": ["./test/*.spec.ts"]
+}
