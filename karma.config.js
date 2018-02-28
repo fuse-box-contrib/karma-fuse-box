@@ -11,7 +11,7 @@ module.exports = config => {
     // disable > error > warn > info > debug
     captureTimeout: 60000,
     autoWatch: true,
-    singleRun: false,
+    singleRun: true,
     colors: true,
     port: 9876,
     basePath: '',
@@ -22,14 +22,10 @@ module.exports = config => {
       'test/*.spec.js': ['fusebox']
     },
 
+    middleware: ['fusebox'],
+
     fusebox: {
-      writeBundles: false,
-      homeDir: path.join(process.cwd(), 'test/'),
-      target: 'browser@es5',
-      log: true,
-      debug: true,
-      sourceMap: true,
-      cache: false
+      homeDir: path.join(process.cwd(), 'test/')
     }
   });
 };
