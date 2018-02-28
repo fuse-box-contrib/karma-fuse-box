@@ -15,11 +15,11 @@ module.exports = config => {
     colors: true,
     port: 9876,
     basePath: '',
-    files: [{ pattern: 'test/t1.spec.js', watched: false }],
+    files: ['test/tx.spec.js'],
     exclude: [],
 
     preprocessors: {
-      'test/*.spec.js': ['fusebox']
+      //'test/*.spec.js': ['fusebox']
     },
 
     middleware: ['fusebox'],
