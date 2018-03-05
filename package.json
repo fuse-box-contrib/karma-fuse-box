@@ -4,7 +4,7 @@
   "description": "Use fuse-box with karma",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "./node_modules/karma/bin/karma start karma.config.js"
+    "test": "node_modules/karma/bin/karma start karma.config.js"
   },
   "author": {
     "name": "Tobias Timm",
