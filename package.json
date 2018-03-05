@@ -12,6 +12,11 @@
     "url": "https://twitter.com/TbsTimm"
   },
   "license": "MIT",
+  "repository": "https://github.com/TobiasTimm/karma-fuse-box.git",
+  "bugs": {
+    "url": "https://github.com/TobiasTimm/karma-fuse-box/issues"
+  },
+  "homepage": "https://github.com/TobiasTimm/karma-fuse-box#readme",
   "keywords": [
     "es2015",
     "karma",
