@@ -15,14 +15,15 @@ module.exports = config => {
     colors: true,
     port: 9876,
     basePath: '',
-    files: [{ pattern: 'test/t1.spec.js', watched: false }],
+    files: [
+      { pattern: 'test/t1.spec.js', watched: false },
+      { pattern: 'test/t2.spec.js', watched: false }
+    ],
     exclude: [],
 
     preprocessors: {
       'test/*.spec.js': ['fusebox']
     },
-
-    middleware: ['fusebox'],
 
     fusebox: {
       homeDir: path.join(process.cwd(), 'test/')
