@@ -12,11 +12,11 @@
   <a href="https://www.npmjs.org/package/karma-fuse-box">
     <img src="https://badge.fury.io/js/karma-fuse-box.svg">
   </a>
-  <a href="https://travis-ci.org/TobiasTimm/karma-fuse-box">
-    <img src="https://img.shields.io/travis/TobiasTimm/karma-fuse-box/master.svg">
+  <a href="https://travis-ci.org/fuse-box-contrib/karma-fuse-box">
+    <img src="https://img.shields.io/travis/fuse-box-contrib/karma-fuse-box/master.svg">
   </a>
-  <a href="https://ci.appveyor.com/project/TobiasTimm/karma-fuse-box/branch/master">
-    <img src="https://img.shields.io/appveyor/ci/TobiasTimm/karma-fuse-box/master.svg?label=Windows">
+  <a href="https://ci.appveyor.com/project/fuse-box-contrib/karma-fuse-box/branch/master">
+    <img src="https://img.shields.io/appveyor/ci/fuse-box-contrib/karma-fuse-box/master.svg?label=Windows">
   </a>
   <p>Use FuseBox to preprocess files in Karma<p>
 </div>
@@ -64,8 +64,8 @@ module.exports = config => {
 
     // for TypeScript
     mime: {
-      'text/x-typescript': ['ts', 'tsx'],
-    },
+      "text/x-typescript": ["ts", "tsx"]
+    }
   });
 };
 ```
@@ -101,7 +101,7 @@ fuseboxInstructions: '+ test/**_test.js',
 
 ```js
 // use fusebox runtime API to load spec files
-FuseBox.import('./**_test');
+FuseBox.import("./**_test");
 ```
 
 ## Options
