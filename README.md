@@ -7,7 +7,7 @@
     <img width="200" height="200" vspace="40" hspace="25"
       src="logo.svg">
   </a>
-  <h1>Karma-FuseBox</h1> 
+  <h1>Karma-FuseBox</h1>
   <img src="https://img.shields.io/npm/dm/karma-fuse-box.svg?style=flat">
   <a href="https://www.npmjs.org/package/karma-fuse-box">
     <img src="https://badge.fury.io/js/karma-fuse-box.svg">
@@ -60,7 +60,12 @@ module.exports = config => {
     fusebox: {
       // FuseBox configuration
       homeDir: path.join(process.cwd(), "test/")
-    }
+    },
+
+    // for TypeScript
+    mime: {
+      'text/x-typescript': ['ts', 'tsx'],
+    },
   });
 };
 ```
@@ -86,19 +91,18 @@ preprocessors: {
   // add fusebox as preprocessor
   'test/index_test.js': [ 'fusebox' ]
 },
+
+// additional arithmetic instructions needed
+// unlike WebPack FuseBox will not recognize files only by source code
+fuseboxInstructions: '+ test/**_test.js',
 ```
 
 **test/index_test.js**
 
 ```js
-// require all modules ending in "_test" from the
-// current directory and all subdirectories
-const testsContext = require.context(".", true, /_test$/);
-
-testsContext.keys().forEach(testsContext);
+// use fusebox runtime API to load spec files
+FuseBox.import('./**_test');
 ```
-
-Every test file is required using the `require.context` and compiled with `FuseBox` into one test bundle.
 
 ## Options
 
@@ -107,6 +111,10 @@ Full list of options you can specify in your `karma.conf.js`
 ### `fusebox`
 
 `FuseBox` configuration (`fuse.js`)
+
+### `fuseboxInstructions`
+
+String with additional instructions for file bundling
 
 ## License
 
